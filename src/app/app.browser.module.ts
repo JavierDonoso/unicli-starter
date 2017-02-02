@@ -10,6 +10,18 @@ import { NgModule } from '@angular/core';
 import { UniversalModule } from 'angular2-universal';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './index';
+
+import { RouterModule } from '@angular/router';
+
+
+import { HomeModule } from './+home/home.module';
+import { AboutModule } from './+about/about.module';
+import { TodoModule } from './+todo/todo.module';
+
+import { SharedModule } from './shared/shared.module';
+
+import { AppRoutingModule } from './app-routing.module';
+import { XLargeDirective } from './app.component';
 // import { RouterModule } from '@angular/router';
 // import { appRoutes } from './app/app.routing';
 
@@ -20,14 +32,21 @@ import { AppComponent } from './index';
   /** Root App Component */
   bootstrap: [ AppComponent ],
   /** Our Components */
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, XLargeDirective ],
+
   imports: [
     /**
      * NOTE: Needs to be your first import (!)
      * BrowserModule, HttpModule, and JsonpModule are included
      */
     UniversalModule,
-    FormsModule
+    FormsModule,
+     SharedModule,
+    HomeModule,
+    AboutModule,
+    TodoModule,
+     RouterModule.forRoot([], { useHash: false }),
+
     /**
      * using routes
      */
