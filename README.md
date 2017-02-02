@@ -1,3 +1,6 @@
+# Universal Starter
+Following repository aims to reproduce Patrick´s universal starter in a project created with universal-cli.
+
 # UnicliStarter
 
 This project was generated with [universal-cli](https://github.com/devCrossNet/universal-cli) version 1.0.0-alpha.universal.3.
